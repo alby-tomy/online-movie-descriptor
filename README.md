@@ -36,3 +36,5 @@ Welcome to the Django Online Moview Descriptor project. This application allows 
 
 6. ***Access the application***
 - Navigate to http://127.0.0.1:8000
+
+## Site Url : http://albytomy2.pythonanywhere.com/
