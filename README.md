@@ -14,22 +14,23 @@ Welcome to the Django Online Moview Descriptor project. This application allows 
    cd online-movie-descriptor
 
 2. ***Activate Virtual Environment***
+
    Install python3 from official website
    ```bash
    python3 -m venv <name-the-venv ex.movie-venv>
    cd movie-venv
    source bin/activate
 
-3. ***Install the Dependencies***
+4. ***Install the Dependencies***
    ```bash
    pip install django
    pip install pillow
 
-4. ***Navigate to the project folder***
+5. ***Navigate to the project folder***
    ```bash
    cd ..
    cd MoviAppPrjtDemo
    python3 manage.py runserver
 
-5. ***Access the application***
+6. ***Access the application***
 - Navigate to http://127.0.0.1:8000
