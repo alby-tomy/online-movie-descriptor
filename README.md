@@ -1,5 +1,5 @@
 # Online Movie Descriptor
-## Overiew
+## Overview
 Welcome to the Django Online Moview Descriptor project. This application allows you to add, delete, update, view description about movies.
 ## Features
 - View description
