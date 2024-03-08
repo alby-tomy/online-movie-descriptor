@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- <form method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit">
+</form> -->
+
+  <center>
+    <form method="POST" enctype="multipart/form-data"
+        style="
+        max-width: 400px; 
+        padding: 20px; 
+        border: 1px solid #ccc; 
+        border-radius: 8px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 2%;">
+        {% csrf_token %}
+
+        <label for="{{ form.name.id_for_label }}" style="display: block; margin-bottom: 8px;">Movie Name:</label>
+        {{ form.name }}
+        <br>
+
+        <label for="{{ form.description.id_for_label }}" style="display: block; margin-bottom: 8px;">Description:</label>
+        <textarea name="{{ form.description.name }}" placeholder="Write about the movie" style="width: 100%; padding: 8px; margin-bottom: 16px; resize: vertical;" rows="5">{{ form.description.value }}</textarea>
+        <br>
+
+        <label for="{{ form.year.id_for_label }}" style="display: block; margin-bottom: 8px;">Release Year:</label>
+        {{ form.year }}
+        <br>
+
+        <label for="{{ form.image.id_for_label }}" style="display: block; margin-bottom: 8px;">Upload Image:</label>
+        {{ form.image }}
+        <input type="file" name="image" style="margin-bottom: 16px;">
+        <br>
+
+        <input type="submit"
+            style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+    </form>
+</center>
+{% endblock %}

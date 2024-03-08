@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block body%}
+
+<div class="container" style="
+background-color:rgb(107, 223, 223);
+margin-top: 2%;
+border-radius: 10px;" >
+    <div class="row">
+        <div class="col-md-4" style="
+            /* background-color: aqua; */
+            padding: 2%;">
+            <img src="{{movie_Id.img.url}}" width="250" height="250" style="border-radius: 10px;"><br>
+        </div>
+        <div class="col-md-6" style="
+        padding: 1%; 
+        text-align:justify;">
+            <h4>{{movie_Id.name}}</h4>
+            <h6>{{movie_Id.year}}</h6>
+            <h6>{{movie_Id.description}}</h6>
+            <a class="btn btn-warning" href="{% url 'movie_app_demo:updateName' movie_Id.id%}">Update</a>
+            <a class="btn btn-danger" href="{%url 'movie_app_demo:deleteName' movie_Id.id%}">Delete</a>            
+            <br>
+            
+        </div>
+    </div>
+
+</div>
+
+{%endblock%}

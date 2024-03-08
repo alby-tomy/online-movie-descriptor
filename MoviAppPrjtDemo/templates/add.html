@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body %}
+<center>
+    <br>
+    <form method="POST" enctype="multipart/form-data"
+        style="max-width: 400px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        {% csrf_token %}
+        <label style="display: block; margin-bottom: 8px;">Movie Name:</label>
+        <input type="text" name="name" placeholder="Enter the movie name"
+            style="width: 100%; padding: 8px; margin-bottom: 16px;">
+
+        <label style="display: block; margin-bottom: 8px;">Description:</label>
+        <textarea name="descri" placeholder="Write about the movie"
+            style="width: 100%; padding: 8px; margin-bottom: 16px; resize: vertical;" rows="5"></textarea>
+
+        <label style="display: block; margin-bottom: 8px;">Release Year:</label>
+        <input type="number" name="year" placeholder="Enter the release year"
+            style="width: 100%; padding: 8px; margin-bottom: 16px;" pattern="\d{4}" title="Please enter a 4-digit year">
+
+        <label style="display: block; margin-bottom: 8px;">Upload Image:</label>
+        <input type="file" name="image" style="margin-bottom: 16px;">
+
+        <input type="submit"
+            style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+
+    </form>
+</center>
+{% endblock %}
